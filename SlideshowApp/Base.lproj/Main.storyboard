@@ -75,6 +75,7 @@
                         <outlet property="UIImageView" destination="PBa-pi-dkO" id="ORy-kE-fy4"/>
                         <outlet property="backButton" destination="cw9-Dy-Dnn" id="HZp-r0-UYf"/>
                         <outlet property="nextButton" destination="Rqf-dn-0yh" id="QSY-yV-lis"/>
+                        <outlet property="playStopButton" destination="Y7G-dG-10l" id="ijr-YM-ZVd"/>
                         <segue destination="Jb1-yl-Ggm" kind="show" identifier="ImageZoomViewController" id="kbk-Gj-LoT"/>
                     </connections>
                 </viewController>

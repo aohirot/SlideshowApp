@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var UIImageView: UIImageView!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var playStopButton: UIButton!
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
     }
@@ -40,6 +41,7 @@ class ViewController: UIViewController {
         let imageView = images[0]
 
         UIImageView.image = imageView
+        playStopButton.setTitle("再生", for: .normal)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -59,6 +61,7 @@ class ViewController: UIViewController {
             timer = nil
             nextButton.isEnabled = true
             backButton.isEnabled = true
+            playStopButton.setTitle("再生", for: .normal)
         }
     }
     
@@ -89,6 +92,7 @@ class ViewController: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(changeImage), userInfo: nil, repeats: true)
             nextButton.isEnabled = false
             backButton.isEnabled = false
+            playStopButton.setTitle("停止", for: .normal)
             } else {
             // 停止時の処理を実装
             // タイマーを停止する
@@ -97,6 +101,7 @@ class ViewController: UIViewController {
             timer = nil
             nextButton.isEnabled = true
             backButton.isEnabled = true
+            playStopButton.setTitle("再生", for: .normal)
         }
 }
 }
